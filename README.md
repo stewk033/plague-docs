@@ -1,28 +1,48 @@
 # Plague Docs
 
-User story
-A a user I would like the convience of having my COVID vaccination information in my virtual wallet
+Description
 
-*When I open the app 
+## User Story
 
-*Then I am requested to create and account with my full name phone number and email address
+AS A
+I WANT
+SO THAT
 
-*When I enter my name number and email
+## Acceptance Criteria
 
-*Then I am prompted to create a password and verify the password
+* _GIVEN_
+* _WHEN_
+* _THEN_
+* _WHEN_
+* _THEN_
+* _WHEN_
+* _THEN_
 
-*When my account is created
+## Credits
 
-*Then I am propmted to input my my COVID vaccination information and demographics
+* Kat Redondo
+    - Responsibilities
+    - [GITHUB](https://github.com/ru3ykat)
+* Vanessa Sylverain
+    - Responsibilities
+    - [GITHUB](https://github.com/sylverainv)
+* Christi Marchetti
+    - Responsibilities
+    - [GITHUB](https://github.com/chl850405)
+* Gabrielle Donald
+    - Responsibilities
+    - [GITHUB](https://github.com/gabriellenoelle)
+* Kevin Stewart
+    - Responsibilities
+    - [GITHUB](https://github.com/stewk033)
 
-*When I press submit 
+## Screenshots
 
-*Then I am prompted to upload or take a photo of my COVID vaccincation card
+![MOCKUP]()
 
-*When I click submit
+![SCREENSHOT]()
 
-*Then I am asked if I would like to save my information and add my card to my virtual wallet or to add a family member
+## Our Solution
 
-*When I click save 
-
-*Then my card is added to my virtual wallet
+Live URL: ()
+GitHub Repository: ()
