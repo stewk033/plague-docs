@@ -1,1 +1,1 @@
-# plague-docs
+# Plague Docs
