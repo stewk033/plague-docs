@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.css';
-import Submit from './components/Submit'
-
+import Login from './pages/Login';
 
 function App() {
+
   return (
     <div>
-      <Submit/>
+      <main>
+       <Login></Login>
+      </main>
     </div>
   );
 }
