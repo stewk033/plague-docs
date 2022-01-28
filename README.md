@@ -4,9 +4,9 @@ Description
 
 ## User Story
 
-AS A User 
+AS A Vaccinated User 
 I WANT my COVID vaccination information in my virtual wallet
-SO THAT I do not have to carry around the phycal card
+SO THAT I do not have to carry around the physical card
 
 ## Acceptance Criteria
 
@@ -46,11 +46,11 @@ SO THAT I do not have to carry around the phycal card
 
 ## Screenshots
 
-![MOCKUP]()
+![MOCKUP](./assets/images/mockup.png)
 
 ![SCREENSHOT]()
 
 ## Our Solution
 
-Live URL: ()
-GitHub Repository: ()
+Live URL: (https://plague-docs.herokuapp.com/)
+GitHub Repository: (https://github.com/stewk033/plague-docs)
