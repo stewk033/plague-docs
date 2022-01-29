@@ -11,7 +11,7 @@ const AdultSchema = new Schema (
         lastName: {
             type: String,
             unique: true,
-            required: 'Please enter your first name',
+            required: 'Please enter your last name',
             trim: true
         },
         email: {
@@ -33,7 +33,7 @@ const AdultSchema = new Schema (
             virtuals: true,
             getters: true
         },
-
+        id: false
     }
 );
 
