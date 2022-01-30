@@ -1,5 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
+const currentYearFormat = require('../utils/currentYearFormat');
 
 const ChildSchema = new Schema (
     {
@@ -23,8 +24,8 @@ const ChildSchema = new Schema (
         },
         phoneNumberRef: {
             type: String,
-            require: true
-            // match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
+            require: true,
+            match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
         },
         // using month, day, year of birth separate to provide for conforming date data
         // using type: Date brings time zone errors 
@@ -50,7 +51,7 @@ const ChildSchema = new Schema (
             max: { 
                 type: Date, 
                 default: Date.now,
-                get: (curDateVal) => dateFormat(curDateVal)
+                get: (currentYearVal) => currentYearFormat(currentYearVal)
             }
         },
         parent: [
