@@ -2,27 +2,62 @@
   --primary-color: #00738C;
   --secondary-color:  #94F684;
 }
-.main{
-  max-height: 900px;
-}
+
 .primary {
+  display: flex;
   background-color: var(--primary-color);
-  max-height: 90%;
+  color: var(--secondary-color);
+  max-height: 100%;
 }
-.primary,
-.secondary {
-  float: left;
-  width: 50%;
-}
+
+
 .secondary {
   color: var(--primary-color);
   background-color: var(--secondary-color);
-  border-radius: 10px;
-  justify-content: flex-end;
+  margin: 30px;
+  float: right;
+  align-self: flex-end; 
+  width: 60%;
+  height: 80%;
+  border-radius: 60px;
 }
 
-.label {
-  position: absolute;
-  top: 0;
-  left: 0;
+.p1,
+.p2{
+
+  text-align: center;
 }
+.p1 {
+  font-size: 20px;
+}
+.form{
+  display: flex;
+  max-width:100%;
+  position:relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+.field,
+.input {
+  height: 10%;
+  width: 90%;
+}
+.field {
+  margin-left: 30px;
+  
+}
+.label {
+  display: flex;
+font-size: 20px;
+}
+.input {
+  background-color: white;
+  display: flex;
+padding: 10px;
+margin: 5px;
+/* width: 390px; */
+border-radius: 10px;
+font-size: 18px;
+}
+
