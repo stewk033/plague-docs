@@ -44,10 +44,10 @@ const AdultSchema = new Schema (
             default: Date.now,
             get: (updatedAtVal) => dateFormat(updatedAtVal)
         },
-        child: [
+        children: [
             {
-                type: Schema.Types.ObjectId,
-                ref: 'Child'
+            type: String,
+            default: 'None'
             }
         ]
     },

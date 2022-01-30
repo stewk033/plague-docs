@@ -1,6 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
-const currentYearFormat = require('../utils/currentYearFormat');
 
 const ChildSchema = new Schema (
     {
@@ -29,30 +28,26 @@ const ChildSchema = new Schema (
         },
         // using month, day, year of birth separate to provide for conforming date data
         // using type: Date brings time zone errors 
-        monthOB: {
-            type: Number,
-            required: 'Please select the birth month of the child',
-            min: 1,
-            max: 12,
-            // enum: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            default: 'Month'
-        },
-        dayOB: {
-            type: Number,
-            required: 'Please select the birth day of the child',
-            min: 1,
-            max: 31,
-            default: 'Day'
-        },
+        // monthOB: {
+        //     type: Number,
+        //     required: 'Please enter the birth month of the child',
+        //     min: 1,
+        //     max: 12,
+        //     // enum: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        //     default: 'Month'
+        // },
+        // dayOB: {
+        //     type: Number,
+        //     required: 'Please enter the birth day of the child',
+        //     min: 1,
+        //     max: 31,
+        //     default: 'Day'
+        // },
         yearOB: {
             type: Number,
-            required: 'Please select the birth year of the child',
+            required: 'Please enter the birth year of the child',
             min: 1900,
-            max: { 
-                type: Date, 
-                default: Date.now,
-                get: (currentYearVal) => currentYearFormat(currentYearVal)
-            }
+            max: new Date().getFullYear()
         },
         parent: [
             {
