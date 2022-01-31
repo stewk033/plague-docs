@@ -1,8 +1,8 @@
-const Card = require('./Card');
-const Child = require('./Child');
 const Adult = require('./Adult');
+const Child = require('./Child');
+// const Card = require('./Card');
 
 // const Family = require('./Family');
 
 
-module.exports = { Card, Child, Adult };
+module.exports = { Adult, Child };

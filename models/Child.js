@@ -5,13 +5,11 @@ const ChildSchema = new Schema (
     {
         childFirst: {
             type: String,
-            unique: false,
             required: 'Please enter the first name of your child',
             trim: true
         },
         childLast: {
             type: String,
-            unique: false,
             required: 'Please enter the last name of your child',
             trim: true
         },
@@ -20,14 +18,16 @@ const ChildSchema = new Schema (
             required: 'Please select gender of child',
             enum: ['M', 'F', 'X']
         },
-        parentGuardian: {
-            type: Schema.Types.ObjectId,
-            ref: 'Adult'
-        },
+        parentGuardian: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Adult'
+            }
+        ],
         phoneNumber: {
             type: String,
             require: true,
-            match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
+            // match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
         },
         birthDate: {
             type: Date,

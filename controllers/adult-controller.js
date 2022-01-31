@@ -1,12 +1,13 @@
-const { Card, Child, Adult } = require('../models');
+const { Adult } = require('../models');
 
 const adultController = {
 
     // get all adults
     getAllAdults(req, res) {
         Adult.find({})
-            .populate({ path: 'vaxCards', select: '-__v' })
+            // .populate({ path: 'vaxCards', select: '-__v' })
             .populate({ path: 'children', select: '-__v' })
+            .select('-__v')
             .then(dbAdultData => res.json(dbAdultData))
             .catch(err => {
                 console.log(err);
@@ -17,10 +18,9 @@ const adultController = {
     // get one adult by Id
     getAdultById({ params }, res) {
         Adult.findOne({ _id: params.id })
-            .populate({
-                path: 'children',
-                select: '-__v'
-            })
+            // .populate({ path: 'vaxCards', select: '-__v' })
+            .populate({ path: 'children', select: '-__v' })
+            .select('-__v')
             .then(dbAdultData => {
                 if (!dbAdultData) {
                     res.status(404).json({ message: 'No Adult found with this id! '});
@@ -57,14 +57,14 @@ const adultController = {
     // delete Adult
     deleteAdult({ params }, res) {
         Adult.findOneAndDelete({ _id: params.id })
-        .then(dbAdultData => {
-            if (!dbAdultData) {
-                res.status(404).json({ message: 'No Adult record found with this id!' });
-                return;
-            }
-            res.json(dbAdultData);
-        })
-        .catch(err => res.status(400).json(err));
+            .then(dbAdultData => {
+                if (!dbAdultData) {
+                    res.status(404).json({ message: 'No Adult record found with this id!' });
+                    return;
+                }
+                res.json(dbAdultData);
+            })
+            .catch(err => res.status(400).json(err));
     }
 
 };

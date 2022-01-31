@@ -7,10 +7,6 @@ const CardSchema = new Schema (
             type: Schema.Types.ObjectId,
             ref: 'Adult'
         },
-        childId: {
-            type: Schema.Types.ObjectId,
-            ref: 'Child'
-        },
         vaxType: {
             type: String,
             required: true,

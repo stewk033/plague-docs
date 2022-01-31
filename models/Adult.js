@@ -5,13 +5,11 @@ const AdultSchema = new Schema (
     {
         adultFirst: {
             type: String,
-            unique: false,
             required: 'Please enter your first name',
             trim: true
         },
         adultLast: {
             type: String,
-            unique: false,
             required: 'Please enter your last name',
             trim: true
         },        
@@ -23,15 +21,13 @@ const AdultSchema = new Schema (
         email: {
             type: String,
             required: true,
-            unique: true,
             trim: true,
             // regex for basic email format including @
-            match: [/.+\@.+\..+/, 'Please input a valid email address']
+            // match: [/.+\@.+\..+/, 'Please input a valid email address']
         },
         phoneNumber: {
             type: String,
-            require: true,
-            match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter a valid phone number']
+            // match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter a valid phone number']
         },
         birthDate: {
             type: Date,
@@ -39,6 +35,7 @@ const AdultSchema = new Schema (
         },
         createdAt: {
             type: Date,
+            default: Date.now,
             immutable: true,
             get: (createdAtVal) => dateFormat(createdAtVal)
         },
