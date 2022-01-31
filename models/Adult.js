@@ -23,11 +23,11 @@ const AdultSchema = new Schema (
             required: true,
             trim: true,
             // regex for basic email format including @
-            // match: [/.+\@.+\..+/, 'Please input a valid email address']
+            match: [/.+\@.+\..+/, 'Please input a valid email address']
         },
         phoneNumber: {
             type: String,
-            // match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter a valid phone number']
+            match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter a valid phone number']
         },
         birthDate: {
             type: Date,

@@ -41,7 +41,7 @@ const childController = {
             })
             .then(dbChildData => {
                 if (!dbChildData) {
-                    res.status(404).json({ message: 'No Child found with this id!' });
+                    res.status(404).json({ message: 'No parent or guardian found with this id!' });
                     return;
                 }
                 res.json(dbChildData);

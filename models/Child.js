@@ -27,7 +27,7 @@ const ChildSchema = new Schema (
         phoneNumber: {
             type: String,
             require: true,
-            // match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
+            match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
         },
         birthDate: {
             type: Date,
