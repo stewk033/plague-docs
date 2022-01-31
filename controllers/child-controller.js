@@ -33,7 +33,7 @@ const childController = {
     addChild({ body }, res) {
         Child.create(body)
             .then(({ _id }) => {
-                return Adult.findOneAndUpdate(
+                return Adult.updateMany(
                     { _id: body.parentGuardian },
                     { $push: { children: _id } },
                     { new: true, runValidators: true }
@@ -51,7 +51,7 @@ const childController = {
 
     // update Child by id
     updateChild({ params, body }, res) {
-        Child.findOneAndUpdate({ _id: params.id }, body, { new: true })
+        Child.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(dbChildData => {
                 if (!dbChildData) {
                     res.status(404).json({ message: 'No Child found with this id!' });
@@ -65,14 +65,24 @@ const childController = {
     // delete Child
     deleteChild({ params }, res) {
         Child.findOneAndDelete({ _id: params.id })
+            .then(deletedChild => {
+                if (!deletedChild) {
+                    res.status(404).json({ message: 'No Child found with this id!' });
+                }
+                return Adult.updateMany(
+                    { _id: body.parentGuardian },
+                    { $pull: { children: _id } },
+                    { new: true, runValidators: true }
+                );
+            })
             .then(dbChildData => {
                 if (!dbChildData) {
-                    res.status(404).json({ message: 'No Child found with this id!' });
+                    res.status(404).json({ message: 'Child has been deleted!' });
                     return;
                 }
                 res.json(dbChildData);
             })
-        .catch(err => res.status(400).json(err));
+            .catch(err => res.json(err));
     }
 
 };

@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const CardSchema = new Schema (
+const AdultcardSchema = new Schema (
     {
         adultId: {
             type: Schema.Types.ObjectId,
@@ -59,6 +59,6 @@ const CardSchema = new Schema (
 );
 
 
-const Card = model('Card', CardSchema);
+const Adultcard = model('Adultcard', AdultcardSchema);
 
-module.exports = Card;
+module.exports = Adultcard;
