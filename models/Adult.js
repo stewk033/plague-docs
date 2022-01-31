@@ -1,15 +1,15 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const AdultSchema = new Schema (
     {
-        firstName: {
+        adultFirst: {
             type: String,
             unique: false,
             required: 'Please enter your first name',
             trim: true
         },
-        lastName: {
+        adultLast: {
             type: String,
             unique: false,
             required: 'Please enter your last name',
@@ -33,6 +33,10 @@ const AdultSchema = new Schema (
             require: true,
             match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter a valid phone number']
         },
+        birthDate: {
+            type: Date,
+            require: 'Please enter patient date of birth'
+        },
         createdAt: {
             type: Date,
             immutable: true,
@@ -51,7 +55,7 @@ const AdultSchema = new Schema (
             }
         ],
         // _id values referencing Card models
-        vaccinationCards: [
+        vaxCards: [
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Card'
@@ -73,7 +77,7 @@ AdultSchema.virtual('childrenCount').get(function() {
 });
 
 AdultSchema.virtual('vaccinationCount').get(function() {
-    return this.vaccinationCards.length;
+    return this.vaxCards.length;
 });
 
 const Adult = model('Adult', AdultSchema);

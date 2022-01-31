@@ -1,4 +1,4 @@
-const { Child } = require('../models');
+const { Child, Adult } = require('../models');
 
 const childController = {
 
@@ -32,7 +32,20 @@ const childController = {
     // create Child
     addChild({ body }, res) {
         Child.create(body)
-            .then(dbChildData => res.json(dbChildData))
+            .then(({ _id }) => {
+                return Adult.findOneAndUpdate(
+                    { _id: body.parentGuardian },
+                    { $push: { children: _id } },
+                    { new: true, runValidators: true }
+                );
+            })
+            .then(dbChildData => {
+                if (!dbChildData) {
+                    res.status(404).json({ message: 'No Child found with this id!' });
+                    return;
+                }
+                res.json(dbChildData);
+            })
             .catch(err => res.status(400).json(err));
     },
 

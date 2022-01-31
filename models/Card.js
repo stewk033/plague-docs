@@ -3,21 +3,21 @@ const dateFormat = require('../utils/dateFormat');
 
 const CardSchema = new Schema (
     {
-        adultPatientId: {
+        adultId: {
             type: Schema.Types.ObjectId,
             ref: 'Adult'
         },
-        childPatientId: {
+        childId: {
             type: Schema.Types.ObjectId,
             ref: 'Child'
         },
-        vaccinationType: {
+        vaxType: {
             type: String,
             required: true,
             enum: ['Pfizer-BioNTech', 'Moderna', 'Oxford-AstraZeneca', 'Johnson & Johnson Janssen', 'Novavax'],
             default: 'Other'
         },
-        vaccinationDate: {
+        vaxDate: {
             type: String,
             required: 'Please enter the date of this vaccination'
         },
@@ -27,12 +27,12 @@ const CardSchema = new Schema (
             trim: true
         },
         lotNum: {
-            type: Number,
+            type: String,
             required: 'Please enter the corresponding Lot Number of this vaccination',
             trim: true
         },
         certNum: {
-            type: Number,
+            type: String,
             required: 'Please enter the corresponding Certification Number of this vaccination',
             trim: true
         },
@@ -54,6 +54,7 @@ const CardSchema = new Schema (
         }
     },
     {
+        timestamps: true,
         toJSON: {
             getters: true
         },

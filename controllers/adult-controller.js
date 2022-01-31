@@ -1,11 +1,11 @@
-const { Adult, Child } = require('../models');
+const { Card, Child, Adult } = require('../models');
 
 const adultController = {
 
     // get all adults
-    getAllAdult(req, res) {
+    getAllAdults(req, res) {
         Adult.find({})
-            .populate({ path: 'vaccinationCards', select: '-__v' })
+            .populate({ path: 'vaxCards', select: '-__v' })
             .populate({ path: 'children', select: '-__v' })
             .then(dbAdultData => res.json(dbAdultData))
             .catch(err => {
