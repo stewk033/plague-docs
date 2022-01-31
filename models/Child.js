@@ -15,13 +15,15 @@ const ChildSchema = new Schema (
             required: 'Please enter the last name of your child',
             trim: true
         },
-        familyRef: {
+        gender: {
             type: String,
-            unique: false,
-            required: 'Please enter the associated family name of the child',
-            trim: true
+            required: 'Please select gender of child',
+            enum: ['M', 'F', 'X']
         },
-        phoneNumberRef: {
+        parentGuardian: {
+            type: 
+        },
+        phoneNumber: {
             type: String,
             require: true,
             match: [/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/, 'Please enter associated family phone number']
@@ -43,18 +45,15 @@ const ChildSchema = new Schema (
         //     max: 31,
         //     default: 'Day'
         // },
-        yearOB: {
-            type: Number,
-            required: 'Please enter the birth year of the child',
-            min: 1900,
-            max: new Date().getFullYear()
+        // yearOB: {
+        //     type: Number,
+        //     required: 'Please enter the birth year of the child',
+        //     min: 1900,
+        //     max: new Date().getFullYear()
+        birthDate: {
+            type: Date,
+            require: 'Please enter patient date of birth'
         },
-        parent: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Adult'
-            }
-        ],
         createdAt: {
             type: Date,
             immutable: true,

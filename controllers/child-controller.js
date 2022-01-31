@@ -2,8 +2,8 @@ const { Child } = require('../models');
 
 const childController = {
 
-   // get all Childs
-    getAllChild(req, res) {
+   // get all Children
+    getAllChildren(req, res) {
         Child.find({})
             .sort({ _id: -1 })
             .then(dbChildData => res.json(dbChildData))

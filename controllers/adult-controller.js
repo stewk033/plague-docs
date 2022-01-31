@@ -6,7 +6,7 @@ const adultController = {
     getAllAdult(req, res) {
         Adult.find({})
             .populate({ path: 'vaccinationCards', select: '-__v' })
-            .select('-__v')
+            .populate({ path: 'children', select: '-__v' })
             .then(dbAdultData => res.json(dbAdultData))
             .catch(err => {
                 console.log(err);

@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const {
     addChild,
-    getAllChild,
+    getAllChildren,
     getChildById,
     updateChild,
     deleteChild
@@ -11,7 +11,7 @@ const {
 // set up GET all and POST at /api/Child
 router
     .route('/')
-    .get(getAllChild)
+    .get(getAllChildren)
     .post(addChild);
 
 // set up GET, PUT, and DELETE at /api/Child/:id

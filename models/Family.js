@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 var FamilySchema = new Schema (
     {
@@ -6,9 +6,17 @@ var FamilySchema = new Schema (
             type: String,
             required: true
         }
-    }
+    },
+    adultId: [
+
+    ],
+    childrenId: [
+
+    ]
 );
 
 const Family = model('Family', FamilySchema);
+
+count in household
 
 module.exports = Family;
