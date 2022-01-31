@@ -5,7 +5,7 @@ import About from "../../components/About";
 import Submit from "../../components/Submit";
 import Navbar from "../../components/Navbar";
 import image from "../../assets/images/pd.png";
-import "./style.css";
+import "../style.css";
 
 function Login() {
   return (
@@ -38,9 +38,8 @@ function Login() {
               <label className="label">Re-enter Password</label>
               <input className="input" placeholder="Confirm Password" />
             </Form.Field>
-            <Submit></Submit>
+            <Submit>Create Account</Submit>
           </Form>
-        
         </Card>
       </Card>
     </div>

@@ -7,13 +7,17 @@
   display: flex;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  max-height: 100%;
+  max-height: 90%;
 }
 
 
-.secondary {
+.secondary,
+.inside {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+
+}
+.secondary{
   margin: 30px;
   float: right;
   align-self: flex-end; 
@@ -21,22 +25,25 @@
   height: 80%;
   border-radius: 60px;
 }
-
+.inside {
+  margin: 30px;
+justify-content: center;
+align-items: center;
+  width: 90%;
+  height: 70%;
+  border-radius: 60px;
+}
 .p1,
 .p2{
-
   text-align: center;
 }
 .p1 {
   font-size: 20px;
 }
 .form{
-  display: flex;
   max-width:100%;
   position:relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; 
+
 }
 .field,
 .input {
@@ -52,7 +59,6 @@
 font-size: 20px;
 }
 .input {
-  background-color: white;
   display: flex;
 padding: 10px;
 margin: 5px;
