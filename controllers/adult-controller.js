@@ -1,11 +1,12 @@
-const { Adult } = require('../models');
+const { Adult, Child } = require('../models');
 
 const adultController = {
 
     // get all adults
     getAllAdult(req, res) {
         Adult.find({})
-            .sort({ _id: -1 })
+            .populate({ path: 'vaccinationCards', select: '-__v' })
+            .select('-__v')
             .then(dbAdultData => res.json(dbAdultData))
             .catch(err => {
                 console.log(err);
@@ -16,10 +17,10 @@ const adultController = {
     // get one adult by Id
     getAdultById({ params }, res) {
         Adult.findOne({ _id: params.id })
-            // .populate({
-            //     path: "children",
-            //     select: "-__v"
-            // })
+            .populate({
+                path: 'children',
+                select: '-__v'
+            })
             .then(dbAdultData => {
                 if (!dbAdultData) {
                     res.status(404).json({ message: 'No Adult found with this id! '});

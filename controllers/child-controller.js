@@ -16,15 +16,6 @@ const childController = {
     // get one Child by id
     getChildById({ params }, res) {
         Child.findOne({ _id: params.id })
-            .populate({
-                path: "thoughts",
-                select: "-__v"
-            })
-            .populate({
-                path: "friends",
-                select: "-__v"
-            })
-            .select("-__v")
             .then(dbChildData => {
                 if (!dbChildData) {
                     res.status(404).json({ message: 'No Child found with this id!'});
