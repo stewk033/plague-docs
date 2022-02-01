@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "./pages/LogIn";
+import Login from "./pages/Login";
 import SavedCards from "./pages/SavedCards";
 import SignUpForm from "./pages/SignUpForm";
 import VaxCardForm from "./pages/VaxCardForm";
