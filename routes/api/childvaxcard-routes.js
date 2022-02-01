@@ -8,17 +8,17 @@ const {
     deleteChildvaxcard,
 } = require('../../controllers/Childvaxcard-controller');
 
-// set up GET all and POST at /api/Card
+// set up GET all and POST at /api/childvaxcard
 router
     .route('/')
-    .get(getAllChildvaxcards)
     .post(addChildvaxcard)
+    .get(getAllChildvaxcards);
 
-// set up GET, PUT, and DELETE at /api/Card/:id
+// set up GET one, PUT, and DELETE at /api/childvaxcard/:id
 router
     .route('/:id')
     .get(getChildvaxcardById)
     .put(updateChildvaxcard)
-    .delete(deleteChildvaxcard)
+    .delete(deleteChildvaxcard);
 
 module.exports = router;

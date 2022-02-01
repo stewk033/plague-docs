@@ -34,7 +34,7 @@ const AdultvaxcardController = {
             .then(({ _id }) => {
                 return Adult.findOneAndUpdate(
                     { _id: body.adultId },
-                    { $push: { Adultvaxcards: _id } },
+                    { $push: { adultvaxcards: _id } },
                     { new: true, runValidators: true }
                 );
             })
@@ -63,8 +63,8 @@ const AdultvaxcardController = {
                     return res.status(404).json({ message: 'No Adultvaxcard record found with this id!' });
                 }
                 return Adult.findOneAndUpdate(
-                    { adultId: body.adultId },
-                    { $push: { vaxAdultvaxcards: _id } },
+                    { _id: body.adultId },
+                    { $pull: { adultvaxcards: _id } },
                     { new: true, runValidators: true }
                 );
             })

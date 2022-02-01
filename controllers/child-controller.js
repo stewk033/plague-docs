@@ -5,6 +5,8 @@ const childController = {
    // get all Children
     getAllChildren(req, res) {
         Child.find({})
+            .populate({ path: 'childvaxcards', select: '-__v' })
+            .select('-__v')
             .sort({ _id: -1 })
             .then(dbChildData => res.json(dbChildData))
             .catch(err => {
@@ -16,20 +18,19 @@ const childController = {
     // get one Child by id
     getChildById({ params }, res) {
         Child.findOne({ _id: params.id })
+            .populate({ path: 'childvaxcards', select: '-__v' })
+            .select('-__v')
             .then(dbChildData => {
                 if (!dbChildData) {
-                    res.status(404).json({ message: 'No Child found with this id!'});
+                    res.status(404).json({ message: 'No Child found with this id!' });
                     return;
                 }
-            res.json(dbChildData);
+                res.json(dbChildData);
         })
-        .catch(err => {
-            console.group(err);
-            res.status(400).json(err);
-        })
+        .catch(err => res.status(400).json(err));
     },
 
-    // create Child
+    // create Child ADULT UPDATE WORKS PERFECTLY DON'T CHANGE!!!!
     addChild({ body }, res) {
         Child.create(body)
             .then(({ _id }) => {

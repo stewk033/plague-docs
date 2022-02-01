@@ -52,7 +52,8 @@ const ChildvaxcardSchema = new Schema (
     {
         timestamps: true,
         toJSON: {
-            getters: true
+            getters: true,
+            virtuals: true
         },
         id: false
     }
