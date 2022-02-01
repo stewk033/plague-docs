@@ -1,9 +1,9 @@
 const Adult = require('./Adult');
 const Child = require('./Child');
-const Adultcard = require('./Adultcard');
-const Childcard = require('./Childcard');
+const Adultvaxcard = require('./Adultvaxcard');
+const Childvaxcard = require('./Childvaxcard');
 
-// const Family = require('./Family');
+// const Household = require('./Household');
 
 
-module.exports = { Adult, Child, Adultcard, Childcard };
+module.exports = { Adult, Child, Adultvaxcard, Childvaxcard };

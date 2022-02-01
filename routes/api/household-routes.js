@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const {
     getFamilyById
-} = require('../../controllers/family-controller');
+} = require('../../controllers/household-controller');
 
 // /api/family
 router

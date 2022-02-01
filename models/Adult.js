@@ -52,10 +52,10 @@ const AdultSchema = new Schema (
             }
         ],
         // _id values referencing Card models
-        vaxCards: [
+        adultvaxcards: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Card'
+                ref: 'Adultvaxcard'
             }
         ]
     },
@@ -74,7 +74,7 @@ AdultSchema.virtual('childrenCount').get(function() {
 });
 
 AdultSchema.virtual('vaccinationCount').get(function() {
-    return this.vaxCards.length;
+    return this.adultvaxcards.length;
 });
 
 const Adult = model('Adult', AdultSchema);

@@ -42,7 +42,14 @@ const ChildSchema = new Schema (
             type: Date,
             default: Date.now,
             get: (updatedAtVal) => dateFormat(updatedAtVal)
-        }
+        },
+        // _id values referencing Card models
+        childvaxcards: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Childvaxcard'
+            }
+        ]
     },
     {
         timestamps: true,
@@ -53,6 +60,10 @@ const ChildSchema = new Schema (
         id: false
     }
 );
+
+ChildSchema.virtual('vaccinationCount').get(function() {
+    return this.childvaxcards.length;
+});
 
 const Child = model('Child', ChildSchema);
 
