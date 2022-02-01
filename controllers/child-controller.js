@@ -5,7 +5,7 @@ const childController = {
    // get all Children
     getAllChildren(req, res) {
         Child.find({})
-            .populate({ path: 'childvaxcards', select: '-__v' })
+            // .populate({ path: 'childvaxcards', select: '-__v' })
             .select('-__v')
             .sort({ _id: -1 })
             .then(dbChildData => res.json(dbChildData))

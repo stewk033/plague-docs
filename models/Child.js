@@ -61,9 +61,9 @@ const ChildSchema = new Schema (
     }
 );
 
-ChildSchema.virtual('vaccinationCount').get(function() {
-    return this.childvaxcards.length;
-});
+// ChildSchema.virtual('vaccinationCount').get(function() {
+//     return this.childvaxcards.length;
+// });
 
 const Child = model('Child', ChildSchema);
 
