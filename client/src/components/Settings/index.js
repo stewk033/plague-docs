@@ -11,11 +11,11 @@ function Settings() {
     className='icon'
   >
     <Dropdown.Menu>
-      <Dropdown.Header icon='tags' content='Settings' />
+      <Dropdown.Header content='Settings' />
       <Dropdown.Divider />
-      <Dropdown.Item icon='attention' text='Edit Account' />
-      <Dropdown.Item icon='comment' text='Add Family Member' />
-      <Dropdown.Item icon='conversation' text='Log Out' />
+      <Dropdown.Item text='Edit Account' />
+      <Dropdown.Item text='Add Family Member' />
+      <Dropdown.Item text='Log Out' />
     </Dropdown.Menu>
   </Dropdown>
 )
