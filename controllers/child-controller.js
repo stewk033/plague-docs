@@ -5,7 +5,6 @@ const childController = {
    // get all Children
     getAllChildren(req, res) {
         Child.find({})
-            // .populate({ path: 'childvaxcards', select: '-__v' })
             .select('-__v')
             .sort({ _id: -1 })
             .then(dbChildData => res.json(dbChildData))
@@ -30,7 +29,7 @@ const childController = {
         .catch(err => res.status(400).json(err));
     },
 
-    // create Child ADULT UPDATE WORKS PERFECTLY DON'T CHANGE!!!!
+    // create Child 
     addChild({ body }, res) {
         Child.create(body)
             .then(({ _id }) => {

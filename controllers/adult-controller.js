@@ -5,7 +5,6 @@ const adultController = {
     // get all adults
     getAllAdults(req, res) {
         Adult.find({})
-            // .populate({ path: 'adultvaxCards', select: '-__v' })
             .populate({ path: 'children', select: '-__v -childvaxcards' })
             .select('-__v')
             .then(dbAdultData => res.json(dbAdultData))
@@ -18,7 +17,6 @@ const adultController = {
     // get one adult by Id
     getAdultById({ params }, res) {
         Adult.findOne({ _id: params.id })
-            // .populate({ path: 'adultvaxCArds', select: '-__v' })
             .populate({ path: 'children', select: '-__v -childvaxcards' })
             .select('-__v')
             .then(dbAdultData => {
