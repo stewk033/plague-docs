@@ -1,0 +1,11 @@
+{
+  "name": "my-graphql-react-project",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "apollo": "^2.33.9"
+  },
+  "dependencies": {
+    "graphql": "^14.7.0"
+  }
+}

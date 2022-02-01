@@ -4,9 +4,21 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const { graphqlHTTP } = require("express-graphql");
+const schema = require("./server/Schema/index.js");
+const cors = require("cors");
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static('public'));
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema,
+    graphiql: true,
+  })
+);
 
 app.use(require('./routes'));
 
