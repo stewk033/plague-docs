@@ -8,7 +8,7 @@ const {
 } = graphql;
 // const userData = require("../MOCK_DATA.json");
 
-const UserType = require("./server/Schema/userType.js");
+const UserType = require("./userType.js");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
