@@ -31,7 +31,7 @@ const AdultSchema = new Schema (
         },
         birthDate: {
             type: Date,
-            require: 'Please enter patient date of birth'
+            required: 'Please enter patient date of birth'
         },
         createdAt: {
             type: Date,
