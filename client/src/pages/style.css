@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 :root {
   --primary-color: #00738c;
   --secondary-color: #94f684;
+=======
+:root{
+  --primary-color: #00738C;
+  --secondary-color:  #94F684;
+>>>>>>> 747b6eca433259e81e8a863ab9b26fa2781b3a19
 }
 
 .primary {
@@ -14,33 +20,58 @@
 .inside {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+<<<<<<< HEAD
 }
 .secondary {
   margin: 30px;
   float: right;
   align-self: flex-end;
+=======
+
+}
+.secondary{
+  margin: 30px;
+  float: right;
+  align-self: flex-end; 
+>>>>>>> 747b6eca433259e81e8a863ab9b26fa2781b3a19
   width: 60%;
   height: 80%;
   border-radius: 60px;
 }
 .inside {
   margin: 30px;
+<<<<<<< HEAD
   justify-content: center;
   align-items: center;
+=======
+justify-content: center;
+align-items: center;
+>>>>>>> 747b6eca433259e81e8a863ab9b26fa2781b3a19
   width: 90%;
   height: 70%;
   border-radius: 60px;
 }
 .p1,
+<<<<<<< HEAD
 .p2 {
+=======
+.p2{
+>>>>>>> 747b6eca433259e81e8a863ab9b26fa2781b3a19
   text-align: center;
 }
 .p1 {
   font-size: 20px;
 }
+<<<<<<< HEAD
 .form {
   max-width: 100%;
   position: relative;
+=======
+.form{
+  max-width:100%;
+  position:relative;
+
+>>>>>>> 747b6eca433259e81e8a863ab9b26fa2781b3a19
 }
 .field,
 .input {
@@ -49,6 +80,7 @@
 }
 .field {
   margin-left: 30px;
+<<<<<<< HEAD
 }
 .label {
   display: flex;
@@ -62,3 +94,20 @@
   border-radius: 10px;
   font-size: 18px;
 }
+=======
+  
+}
+.label {
+  display: flex;
+font-size: 20px;
+}
+.input {
+  display: flex;
+padding: 10px;
+margin: 5px;
+/* width: 390px; */
+border-radius: 10px;
+font-size: 18px;
+}
+
+>>>>>>> 747b6eca433259e81e8a863ab9b26fa2781b3a19
