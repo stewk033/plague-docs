@@ -65,5 +65,5 @@ SO THAT I do not have to carry around the physical card
 
 ## Deployment&Repository
 
-Live URL: (https://plague-docs.herokuapp.com/) <br/>
-GitHub Repository: (https://github.com/stewk033/plague-docs)
+Live URL: https://plague-docs.herokuapp.com/ <br/>
+GitHub Repository: https://github.com/stewk033/plague-docs
