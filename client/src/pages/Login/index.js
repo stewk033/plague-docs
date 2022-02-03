@@ -8,8 +8,8 @@ import image from "../../assets/images/pd.png";
 import "../style.css";
 
 function Login() {
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser] = useMutation(ADD_USER);
+  // const [formState, setFormState] = useState({ email: '', password: '' });
+  // const [addUser] = useMutation(ADD_USER);
   return (
     <div className="main">
       <Card className="primary" style={{ height: "100vh", width: "100%" }}>
