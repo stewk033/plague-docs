@@ -4,12 +4,12 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 
 ## Table of Contents
 
-[Technologies](#Technologies)
-[Story](#Story)
-[Criteria](#Criteria)
-[Credits](#Credits)
-[Screenshots](#Screenshots)
-[Deployment&Repository](#Deployment&Repository)
+* [Technologies](#Technologies)
+* [Story](#Story)
+* [Criteria](#Criteria)
+* [Credits](#Credits)
+* [Screenshots](#Screenshots)
+* [Deployment&Repository](#Deployment&Repository)
 
 ## Technologies
 
