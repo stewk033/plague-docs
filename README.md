@@ -9,7 +9,7 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 * [Criteria](#Criteria)
 * [Credits](#Credits)
 * [Screenshots](#Screenshots)
-* [Future](#Future)
+* [FutureDev](#FutureDev)
 * [Deployment&Repository](#Deployment&Repository)
 
 ## Technologies
@@ -64,32 +64,31 @@ SO THAT I do not have to carry around the physical card
 
 ![MOCKUP](./assets/images/mockup.png)
 
-## Future
+## FutureDev
 
-For Future Development:
-- Build Models to represent further patient data, such as:
-  => Health Insurance Cards
-  => ICE (In Case of Emergency) Details
-  => Childhood Vaccinations and Boosters
-  => Patient Conditions
-  => Patient Medications/Supplements
-- Build Documents containing compiled Household Adults and Children via references, providing for Notifications (via push, email, or text):
-  => set up by Adult users for health-related reminders (appointments)
-  => from application for vaccination dose/booster reminders
-  => from local health authorities for safety requirements (masks, vaccination status)
-  => from local resources concerning vaccination, treatment, or healthcare location availability
-  => from CDC regarding current illness, variants of concern, recommended procedures
-- Establish Fields in Household Documents for contact tracing, to help prevent the spread of current or future infectious diseases:
-  => Adapting resources (e.g. Google Maps) to trace patient travel and contacts over a recent, incubation time-reflective, time period
-  => Self-monitored and reported potentially infectious interactions, exposures, and symptoms of disease (via checkbox, write-in)
-  => Local health department guidance and assistance for patient isolation
-  => Inform associated Household contacts of their exposures, provide risk assessments, symptom red flags, and instructions for next steps
-  => Provide daily check-in surveys of symptoms for monitoring and follow-ups
-  => Sharing of community resources for mental health associated with illness/loss
-- Provide data from and to high-risk/priority situations and patients in:
-  => Health care (including long-term care) facilities
-  => Student housing
-  => Homeless shelters
+* Build Models to represent further patient data, such as:<br/>
+  => Health Insurance Cards<br/>
+  => ICE (In Case of Emergency) Details<br/>
+  => Childhood Vaccinations and Boosters<br/>
+  => Patient Conditions<br/>
+  => Patient Medications/Supplements<br/><br/>
+* Build Documents containing compiled Household Adults and Children via references, providing for Notifications (via push, email, or text):<br/>
+  => set up by Adult users for health-related reminders (appointments)<br/>
+  => from application for vaccination dose/booster reminders<br/>
+  => from local health authorities for safety requirements (masks, vaccination status)<br/>
+  => from local resources concerning vaccination, treatment, or healthcare location availability<br/>
+  => from CDC regarding current illness, variants of concern, recommended procedures<br/><br/>
+* Establish Fields in Household Documents for contact tracing, to help prevent the spread of current or future infectious diseases:<br/><br/>
+  => Adapting resources (e.g. Google Maps) to trace patient travel and contacts over a recent, incubation time-reflective, time period<br/>
+  => Self-monitored and reported potentially infectious interactions, exposures, and symptoms of disease (via checkbox, write-in)<br/>
+  => Local health department guidance and assistance for patient isolation<br/>
+  => Inform associated Household contacts of their exposures, provide risk assessments, symptom red flags, and instructions for next steps<br/>
+  => Provide daily check-in surveys of symptoms for monitoring and follow-ups<br/>
+  => Sharing of community resources for mental health associated with illness/loss<br/><br/>
+* Provide data from and to high-risk/priority situations and patients in:<br/<br/>
+  => Health care (including long-term care) facilities<br/>
+  => Student housing<br/>
+  => Homeless shelters<br/>
   => Correctional facilities
 
 ## Deployment&Repository
