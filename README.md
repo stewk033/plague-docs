@@ -37,7 +37,7 @@ SO THAT I do not have to carry around the physical card
 * _WHEN_ I click submit
 * _THEN_ I am asked if I'd like to save or add a family member
 * _WHEN_ save is selected 
-* _THEN_the card is added to the virtual wallet
+* _THEN_ the card is added to the virtual wallet
 * _WHEN_ add a family member is selected 
 * _THEN_ the app goes through the prompts to input COVID vaccination information until save is selected
 
