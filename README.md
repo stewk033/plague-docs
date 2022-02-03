@@ -4,26 +4,26 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 
 ## Table of Contents
 
-[Technologies Used](#Technologies Used)
-[User Story](#User Story)
-[Acceptance Criteria](#Acceptance Criteria)
-[Team Credits](#Team Credits)
+[Technologies](#Technologies)
+[Story](#Story)
+[Criteria](#Criteria)
+[Credits](#Credits)
 [Screenshots](#Screenshots)
-[Deployment and Repository](#Deployment and Repository)
+[Deployment&Repository](#Deployment&Repository)
 
-## Technologies Used
+## Technologies
 
 * MongoDB, Express, React, Node – the MERN stack
 * Mongoose, GraphQL, Jest, Semantic UI-React, npm
 * Paradigms used in app construction: Object-Oriented Programming, Model-View-Controller
 
-## User Story
+## Story
 
 AS A Vaccinated User 
 I WANT my COVID vaccination information in my virtual wallet
 SO THAT I do not have to carry around the physical card
 
-## Acceptance Criteria
+## Criteria
 
 * _GIVEN_ an application for vaccination input
 * _WHEN_ I open the app
@@ -41,7 +41,7 @@ SO THAT I do not have to carry around the physical card
 * _WHEN_ add a family member is selected 
 * _THEN_ the app goes through the prompts to input COVID vaccination information until save is selected
 
-## Team Credits
+## Credits
 
 * Kat Redondo
     - MongoDB, Queries, Mutations
@@ -65,7 +65,7 @@ SO THAT I do not have to carry around the physical card
 
 ![SCREENSHOT]()
 
-## Deployment and Repository
+## Deployment&Repository
 
 Live URL: (https://plague-docs.herokuapp.com/) <br/>
 GitHub Repository: (https://github.com/stewk033/plague-docs)
