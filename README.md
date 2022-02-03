@@ -19,8 +19,8 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 
 ## Story
 
-AS A Vaccinated User 
-I WANT my COVID vaccination information in my virtual wallet
+AS A Vaccinated User <br/>
+I WANT my COVID vaccination information in my virtual wallet <br/>
 SO THAT I do not have to carry around the physical card
 
 ## Criteria
