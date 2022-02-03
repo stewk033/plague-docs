@@ -63,8 +63,6 @@ SO THAT I do not have to carry around the physical card
 
 ![MOCKUP](./assets/images/mockup.png)
 
-![SCREENSHOT]()
-
 ## Deployment&Repository
 
 Live URL: (https://plague-docs.herokuapp.com/) <br/>
