@@ -5,10 +5,8 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 ## Technologies Used
 
 * MongoDB, Express, React, Node – the MERN stack
-* Mongoose, Jest, Semantic UI-React, npm
+* Mongoose, GraphQL, Jest, Semantic UI-React, npm
 * Paradigms used in app construction: Object-Oriented Programming, Model-View-Controller
-
-<br/><br/>
 
 ## User Story
 
@@ -37,19 +35,19 @@ SO THAT I do not have to carry around the physical card
 ## Credits
 
 * Kat Redondo
-    - Responsibilities
+    - MongoDB, Queries, Mutations
     - [GITHUB](https://github.com/ru3ykat)
 * Vanessa Sylverain
-    - Responsibilities
+    - GraphQL with Node and Express
     - [GITHUB](https://github.com/sylverainv)
 * Christi Marchetti
-    - Responsibilities
+    - React Front-end
     - [GITHUB](https://github.com/chl850405)
 * Gabrielle Donald
-    - Responsibilities
+    - React Front-end
     - [GITHUB](https://github.com/gabriellenoelle)
 * Kevin Stewart
-    - Responsibilities
+    - Authentication, JWT, Protect API Key, Deployment
     - [GITHUB](https://github.com/stewk033)
 
 ## Screenshots
