@@ -1,6 +1,14 @@
 # Plague Docs
 
-Description
+If you’ve lived on earth for the past two years, then you are well aware of everything that’s happened here lately! If you’ve received the coronavirus vaccine, you need to carry your card around when you travel or go places… right? Not anymore! Introducing Plague Docs: the new app that carries your vaccine card FOR you!<br/><br/>
+
+## Technologies Used
+
+* MongoDB, Express, React, Node – the MERN stack
+* Mongoose, Jest, Semantic UI-React, npm
+* Paradigms used in app construction: Object-Oriented Programming, Model-View-Controller
+
+<br/><br/>
 
 ## User Story
 
