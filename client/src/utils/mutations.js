@@ -26,6 +26,7 @@ export const ADD_USER = gql`
       birthDate
       createdAt
       updatedAt: 
+      }
     }
   }
 `;
