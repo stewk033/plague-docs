@@ -1,10 +1,10 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
-import './style.css'
+import "./style.css";
 function SavedCards() {
   return (
     <Card.Group className="primary" style={{ height: "100vh", width: "100%" }}>
-      <Card >
+      <Card>
         <Card.Content>
           <Card.Header>Mom</Card.Header>
           <Card.Meta>Parent</Card.Meta>
