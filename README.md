@@ -9,6 +9,7 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 * [Criteria](#Criteria)
 * [Credits](#Credits)
 * [Screenshots](#Screenshots)
+* [Future](#Future)
 * [Deployment&Repository](#Deployment&Repository)
 
 ## Technologies
@@ -62,6 +63,34 @@ SO THAT I do not have to carry around the physical card
 ## Screenshots
 
 ![MOCKUP](./assets/images/mockup.png)
+
+## Future
+
+For Future Development:
+- Build Models to represent further patient data, such as:
+  => Health Insurance Cards
+  => ICE (In Case of Emergency) Details
+  => Childhood Vaccinations and Boosters
+  => Patient Conditions
+  => Patient Medications/Supplements
+- Build Documents containing compiled Household Adults and Children via references, providing for Notifications (via push, email, or text):
+  => set up by Adult users for health-related reminders (appointments)
+  => from application for vaccination dose/booster reminders
+  => from local health authorities for safety requirements (masks, vaccination status)
+  => from local resources concerning vaccination, treatment, or healthcare location availability
+  => from CDC regarding current illness, variants of concern, recommended procedures
+- Establish Fields in Household Documents for contact tracing, to help prevent the spread of current or future infectious diseases:
+  => Adapting resources (e.g. Google Maps) to trace patient travel and contacts over a recent, incubation time-reflective, time period
+  => Self-monitored and reported potentially infectious interactions, exposures, and symptoms of disease (via checkbox, write-in)
+  => Local health department guidance and assistance for patient isolation
+  => Inform associated Household contacts of their exposures, provide risk assessments, symptom red flags, and instructions for next steps
+  => Provide daily check-in surveys of symptoms for monitoring and follow-ups
+  => Sharing of community resources for mental health associated with illness/loss
+- Provide data from and to high-risk/priority situations and patients in:
+  => Health care (including long-term care) facilities
+  => Student housing
+  => Homeless shelters
+  => Correctional facilities
 
 ## Deployment&Repository
 
