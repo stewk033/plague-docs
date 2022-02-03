@@ -1,15 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const { ApolloServer } = require("apollo-server-express");
+const cors = require("cors");
+const { graphqlHTTP } = require("express-graphql");
+const { makeExecutableSchema } = require("@graphql-tools/schema");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const { graphqlHTTP } = require("express-graphql");
-const db = require("./config/connection");
-const schema = require("./server/Schema/index.js");
-// const { authMiddleware } = require("./utils/auth");
-const cors = require("cors");
+const { typeDefs, resolvers } = require("./server/Schema/index.js");
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 app.use(cors());
 app.use(express.json());
@@ -21,22 +20,14 @@ app.use(
     graphiql: true,
   })
 );
-
-// const startServer = async () => {
-//   const server = new ApolloServer({
-//     typeDefs,
-//     resolvers,
-//     context: authMiddleware,
-//   });
-//   await server.start();
-//   server.applyMiddleware({ app });
-//   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-// };
-
-// startServer();
-
 app.use(require("./routes"));
 
-db.once("open", () => {
-  app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
-});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost:27017/plague-docs",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+
+app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
