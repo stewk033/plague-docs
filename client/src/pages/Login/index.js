@@ -8,8 +8,8 @@ import './style.css'
 function Login() {
 return(
 < div className='main'>
-<Card className='primary'>
-<Avatar src={image} />
+ <Card className='primary'>
+ <Avatar src={image} />
   <About></About>
   </Card>
   <Grid.Column>

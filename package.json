@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "A digital vaccination wallet",
   "main": "server.js",
+  "engines": {
+    "node": "14.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "\"concurrently\" \"node server.js\" \"cd client && npm start\" ",
     "dev": "npx nodemon server.js"
   },
   "repository": {
@@ -19,10 +22,14 @@
   },
   "homepage": "https://github.com/stewk033/plague-docs#readme",
   "dependencies": {
+    "apollo-server": "^3.6.2",
+    "apollo-server-express": "^3.6.2",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-graphql": "^0.12.0",
-    "graphql": "^14.7.0",
+    "graphql": "^15.8.0",
+    "graphql-tools": "^8.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8"
   },
