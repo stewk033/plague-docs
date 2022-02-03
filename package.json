@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "\"concurrently\" \"node server.js\" \"cd client && npm start\" ",
     "dev": "npx nodemon server.js"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "dependencies": {
     "apollo-server": "^3.6.2",
     "apollo-server-express": "^3.6.2",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-graphql": "^0.12.0",
