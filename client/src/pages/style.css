@@ -1,0 +1,68 @@
+:root{
+  --primary-color: #00738C;
+  --secondary-color:  #94F684;
+}
+
+.primary {
+  display: flex;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  max-height: 90%;
+}
+
+.secondary,
+.inside {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+
+}
+.secondary{
+  margin: 30px;
+  float: right;
+  align-self: flex-end; 
+  width: 60%;
+  height: 80%;
+  border-radius: 60px;
+}
+.inside {
+  margin: 30px;
+justify-content: center;
+align-items: center;
+  width: 90%;
+  height: 70%;
+  border-radius: 60px;
+}
+.p1,
+.p2{
+  text-align: center;
+}
+.p1 {
+  font-size: 20px;
+}
+.form{
+  max-width:100%;
+  position:relative;
+
+}
+.field,
+.input {
+  height: 10%;
+  width: 90%;
+}
+.field {
+  margin-left: 30px;
+  
+}
+.label {
+  display: flex;
+font-size: 20px;
+}
+.input {
+  display: flex;
+padding: 10px;
+margin: 5px;
+/* width: 390px; */
+border-radius: 10px;
+font-size: 18px;
+}
+

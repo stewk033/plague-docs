@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "semantic-ui-css/semantic.min.css";
+import { NavLink, Flex } from 'theme-ui'
 import Settings from "../Settings";
 
 function Navbar() {
   return (
     <>
-      <div class="ui compact menu">
-        <a class="item">
-          <Link to="/savedCards">My Account</Link>
-        </a>
-        <a class="item">{Settings}</a>
-      </div>
+<Flex as="nav">
+  <NavLink href="#!" p={2}>
+    My Account
+  </NavLink>
+<Settings/>
+</Flex>
     </>
   );
 }
