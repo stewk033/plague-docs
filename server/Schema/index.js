@@ -6,14 +6,17 @@ const {
   GraphQLString,
   GraphQLList,
 } = graphql;
-// const userData = require("../MOCK_DATA.json");
+const userData = require("../MOCK_DATA.json");
 
-const UserType = require("./userType.js");
+const AdultCardType = require("./server/Schema/typeDefs/AdultCardType.js");
+const ChildCardType = require("./server/Schema/typeDefs/ChildCardType.js");
+const AdultUser = require("./server/Schema/typeDefs/AdultUser.js");
+const ChildUser = require("./server/Schema/typeDefs/ChildUser.js");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
-    getAllUsers: {
+    getAllAdults: {
       type: new GraphQLList(UserType),
       args: { id: { type: GraphQLInt } },
       resolve(parent, args) {
@@ -29,10 +32,15 @@ const Mutation = new GraphQLObjectType({
     createUser: {
       type: UserType,
       args: {
+        id: { type: GraphQLInt },
         firstName: { type: GraphQLString },
         lastName: { type: GraphQLString },
+        gender: {type: GraphQLString},
         email: { type: GraphQLString },
-        password: { type: GraphQLString },
+        phoneNumber: { type: GraphQLString },
+        birthDate: { type: GraphQLString },
+        createdAt: { type: GraphQLString },
+        updatedAt: { type: GraphQLString }
       },
       resolve(parent, args) {
         userData.push({

@@ -1,0 +1,28 @@
+:root{
+  --primary-color: #00738C;
+  --secondary-color:  #94F684;
+}
+.main{
+  max-height: 900px;
+}
+.primary {
+  background-color: var(--primary-color);
+  max-height: 90%;
+}
+.primary,
+.secondary {
+  float: left;
+  width: 50%;
+}
+.secondary {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  justify-content: flex-end;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
