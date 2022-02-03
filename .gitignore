@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 /client/node_modules
 node_modules
 package-lock.json
+=======
+node_modules
+.env
+.DS_Store
+/client/node_modules
+>>>>>>> 1fccf70f2b51f6840d0d123e60d6edd81c339f19
