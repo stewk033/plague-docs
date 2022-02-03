@@ -2,7 +2,7 @@
 
 If you’ve lived on earth for the past two years, then you are well aware of everything that’s happened here lately! If you’ve received the coronavirus vaccine, you need to carry your card around when you travel or go places… right? Not anymore! Introducing Plague Docs: the new app that carries your vaccine card FOR you!<br/><br/>
 
-<center> ![download](https://user-images.githubusercontent.com/88753098/152431877-6c3e6d41-f2f8-42f6-9315-8f2d553c1610.jpg) <br/><br/> </center>
+![download](https://user-images.githubusercontent.com/88753098/152431877-6c3e6d41-f2f8-42f6-9315-8f2d553c1610.jpg) <br/><br/>
 
 ## Table of Contents
 
