@@ -2,6 +2,15 @@
 
 If you’ve lived on earth for the past two years, then you are well aware of everything that’s happened here lately! If you’ve received the coronavirus vaccine, you need to carry your card around when you travel or go places… right? Not anymore! Introducing Plague Docs: the new app that carries your vaccine card FOR you!<br/><br/>
 
+## Table of Contents
+
+[Technologies Used](#Technologies Used)
+[User Story](#User Story)
+[Acceptance Criteria](#Acceptance Criteria)
+[Team Credits](#Team Credits)
+[Screenshots](#Screenshots)
+[Deployment and Repository](#Deployment and Repository)
+
 ## Technologies Used
 
 * MongoDB, Express, React, Node – the MERN stack
@@ -32,7 +41,7 @@ SO THAT I do not have to carry around the physical card
 * _WHEN_ add a family member is selected 
 * _THEN_ the app goes through the prompts to input COVID vaccination information until save is selected
 
-## Credits
+## Team Credits
 
 * Kat Redondo
     - MongoDB, Queries, Mutations
@@ -56,7 +65,7 @@ SO THAT I do not have to carry around the physical card
 
 ![SCREENSHOT]()
 
-## Our Solution
+## Deployment and Repository
 
-Live URL: (https://plague-docs.herokuapp.com/)
+Live URL: (https://plague-docs.herokuapp.com/) <br/>
 GitHub Repository: (https://github.com/stewk033/plague-docs)
