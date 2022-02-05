@@ -1,47 +1,15 @@
 import React, {useState} from "react";
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../../utils/mutations';
 import { Form, Card } from "semantic-ui-react";
 import { Avatar } from "theme-ui";
 import About from "../../components/About";
 import Submit from "../../components/Submit";
 import Navbar from "../../components/Navbar";
 import image from "../../assets/images/pd.png";
-import "../style.css";
+// import "../style.css";
 
 function Login() {
-<<<<<<< HEAD
-return(
-< div className='main'>
- <Card className='primary'>
- <Avatar src={image} />
-  <About></About>
-  </Card>
-  <Grid.Column>
-  <Card className='secondary'>
-    <Form.Field>
-      <label>Your Name</label>
-      <input placeholder='Full Name' />
-    </Form.Field>
-    <Form.Field>
-      <label>Your Email</label>
-      <input placeholder='Email Address' />
-    </Form.Field>
-    <Form.Field>
-      <label>Password</label>
-      <input placeholder='Create Password' />
-    </Form.Field>
-    <Form.Field>
-      <label>Re-enter Password</label>
-      <input placeholder='Confirm Password' />
-    </Form.Field>
-    <Form.Field>
-      <Checkbox label='I agree to the Terms and Conditions' />
-    </Form.Field>
-    <Button type='submit'>Create Account</Button>
-  </Card>
-  </Grid.Column>
-  </div>
-);
-=======
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
   return (
@@ -80,6 +48,5 @@ return(
       </Card>
     </div>
   );
->>>>>>> f1ca88760d96882918d23737baf811e01e0411a2
 }
 export default Login;
